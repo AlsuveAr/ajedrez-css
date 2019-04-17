@@ -1,0 +1,50 @@
+body {
+	background-color: orange;
+}
+
+.container {
+	padding-top: 50px;
+	
+
+}
+.tablero {
+	display: grid;
+	grid-template-columns: repeat(8, 4em);
+	grid-gap: none;
+	
+
+	align-items: center;
+	justify-content: center;
+}
+.c-white {
+	background-color: white;
+	width: 4em ;
+	height: 4em ;
+}
+.c-black {
+	background-color: black;
+	width: 4em;
+	height: 4em;
+}
+
+/*footer*/
+footer{
+	display: flex;
+	justify-content: center;
+	padding-bottom: 20px;
+}
+
+.footer {
+	font-size: .9em;
+}
+
+.footer > i {
+	color: red;
+}
+
+.msg {
+	display: flex;
+	justify-content: center;
+	visibility: hidden;
+	font-size: .9em;
+}
