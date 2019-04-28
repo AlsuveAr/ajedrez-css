@@ -3,6 +3,8 @@
 
 }
 
+
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
 	.tablero {
@@ -20,8 +22,34 @@
 	}
 }
 
+
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+	/*Ajedrez*/
+	.menu-l, .menu-r {
+		display: none;
+	}
+
+	.menu-btn {
+		display: inline;
+	}
+	.menu > .menu-btn {
+		-webkit-order: 1;
+	            order: 1;
+	}
+	.menu > .menu-logo {
+		-webkit-order: 2;
+	            order: 2;
+	}
+	.menu-logo, .menu-btn {
+		padding-left: 2em;
+		padding-right: 2em; 
+	}
+	.menu-btn a:hover {
+	  border-bottom: 5px solid orange;
+	}
+
+	/*Tablero*/
 	.tablero {
 		display: grid;
 		grid-template-columns: repeat(8, 3.9em);
@@ -87,6 +115,13 @@
 }
 
 @media only screen and (max-width : 390px) {
+	/*menu*/
+	.menu-logo, .menu-btn {
+		padding-left: 1em;
+		padding-right: 1em; 
+	}
+
+	/*tablero*/
 	.tablero {
 		display: grid;
 		grid-template-columns: repeat(8, 2.4em);
@@ -110,8 +145,16 @@
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px) {
+	/*menu*/
+	.menu-logo, .menu-btn {
+		padding-left: .2em;
+		padding-right: .2em; 
+	}
+	.menu {
+		justify-content: space-around;
+	}
 	.container {
-		margin-top: 50px;
+		margin-top: .2rem;
 	}
 	.tablero {
 		display: grid;

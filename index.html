@@ -11,9 +11,55 @@
 
 	<link rel="stylesheet" type="text/css" href="./css/main.css">
 	<link rel="stylesheet" type="text/css" href="./css/responsive.css">
+	<style type="text/css">
+
+
+	</style>
 </head>
 <body>
-	<div class="container">
+	<header>
+		<div class="menu">
+			<div class="menu-logo">
+				<a href="" class="link"><img src="./img/corona.svg" height="50px" width="50px;"></a></div>
+			<div class="menu-r">
+				<a href="" class="link">Historia</a>
+				<a href="" class="link">Variantes</a>
+			</div>
+			<div class="menu-l">
+				<a href="" class="link">Reglas</a>
+				<a href="" class="link">Puntaje</a>
+			</div>
+			<div class="menu-btn">
+				<a id="abrir" class="abrir-cerrar" href="javascript:void(0)" onclick="mostrar()">
+			        <i class="fa fa-bars fa-3x"></i>
+			    </a>
+			    <a id="cerrar" class="abrir-cerrar" href="javascript:void(0)" onclick="ocultar()">
+			        <i class="fa fa-times fa-3x"></i>
+			    </a>
+			</div>
+
+			<!--Contenido responsive-->
+			<div class="menu-cont" id="menu-cont">
+				<a href="#" class="boton-cerrar" onclick="ocultar()">&times;</a>
+				<ul>
+					<li>
+						<a href="" class="link">Reglas</a>
+					</li>
+					<li>
+						<a href="" class="link">Puntaje</a>
+					</li>
+					<li>
+						<a href="" class="link">Historia</a>
+					</li>
+					<li>
+						<a href="" class="link">Variantes</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+	</header>
+	<div class="container" id="contenido">
 		<div class="tablero">
 
 			<!--1-->
@@ -110,5 +156,21 @@
 			Realizado con <i class="fa fa-heart"></i> por Al
 		</div>
 	</footer>
+
+	<script type="text/javascript">
+		function mostrar() {
+		    document.getElementById("menu-cont").style.display = "inline";
+		    //document.getElementById("contenido").style.marginLeft = "300px";
+		    document.getElementById("abrir").style.display = "none";
+		    document.getElementById("cerrar").style.display = "inline";
+		}
+
+		function ocultar() {
+		    document.getElementById("menu-cont").style.display = "none";
+		    //document.getElementById("contenido").style.marginLeft = "0";
+		    document.getElementById("abrir").style.display = "inline";
+		    document.getElementById("cerrar").style.display = "none";
+		}
+	</script>
 </body>
 </html>
